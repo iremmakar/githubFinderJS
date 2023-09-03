@@ -7,11 +7,9 @@ class Github {
   }
 
   async getUser(user) {
-    const profileResponse = await fetch(`https://api.github.com/users/${user}`);
+    const profileResponse = await fetch(`api`);
 
-    const repoResponse = await fetch(
-      `https://api.github.com/users/${user}/repos`
-    );
+    const repoResponse = await fetch(`api`);
 
     const profile = await profileResponse.json();
     const repos = await repoResponse.json();
